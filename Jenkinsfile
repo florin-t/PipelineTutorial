@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                     echo "Info about the system:"
                 '''
-                sh uname -a
+                sh 'uname -a'
 
             }
         }

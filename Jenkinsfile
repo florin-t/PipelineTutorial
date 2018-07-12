@@ -6,8 +6,9 @@ pipeline {
                 sh 'echo "..."'
                 sh '''
                     echo "Info about the system:"
-                    uname -a
                 '''
+                sh 'uname -a'
+
             }
         }
 	stage('Build') {
@@ -15,8 +16,9 @@ pipeline {
                 sh 'echo "Hello There"'
                 sh '''
                     echo "Multiline shell steps works too"
-                    ls -lah
                 '''
+		sh 'ls -lah'
+                
             }
         }
 	stage('Post Build') {
@@ -24,8 +26,9 @@ pipeline {
                 sh 'echo "Bye"'
                 sh '''
                     echo "last stage"
-                    pwd 
+                   
                 '''
+	 	sh 'pwd'
             }
         }
 

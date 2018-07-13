@@ -11,33 +11,33 @@ pipeline {
 
             }
         }
-	stage('Build') {
+	    stage('Build') {
             steps {
                 sh 'echo "Hello There"'
                 sh '''
                     echo "Multiline shell steps works too"
                 '''
-		sh 'ls -lah'
+		        sh 'ls -lah'
                 
             }
         }
-	stage('Post Build') {
+	    stage('Post Build') {
             steps {
                 sh 'echo "Bye"'
                 sh '''
                     echo "last stage"
                    
                 '''
-	 	sh 'pwd'
+	 	        sh 'pwd'
             }
         }
-
-    }
-    stage('Test') {
+        stage('Test') {
             steps {
                 sh 'echo "Fail!"; exit 1'
             }
+        }
     }
+
 
     post {
         always {

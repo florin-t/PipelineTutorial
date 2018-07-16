@@ -33,7 +33,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'node --version'
             }
         }
         stage('Sanity check') {
